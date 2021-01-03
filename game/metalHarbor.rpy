@@ -7,4 +7,25 @@ label metalHarbor:
 
     "You did it you made it to the Metal Harbor."
 
+    menu:
+        "Do you fuck it up or not?"
+
+        "Fucked it up.":
+            $ sonicArrested = True
+
+            show bob at center:
+                zoom 2
+
+            bob "lol bye."
+
+            jump gtcDark
+
+        "No I'm a good kid.":
+            show tekno at side_left
+
+            tekno "I knew you could be trusted!"
+            tekno "Let's go to the groovy train!"
+
+            jump groovyTrainCafe
+
     return

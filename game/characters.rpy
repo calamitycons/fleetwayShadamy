@@ -20,3 +20,7 @@ label characters:
     ## Bob Beaky (the ever enigmatic and mysterious)
     define bob = Character("Bob Beaky")
     image bob = Image("/images/chr/bob-Beaky.png")
+
+    ## Tekno the Canary
+    define tekno = Character("Tekno")
+    image tekno = Image("images/chr/tekno.png")

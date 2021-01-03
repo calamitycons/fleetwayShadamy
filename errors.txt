@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/metalHarbor.rpy", line 17: expected 'comma or end of line' not found.
+    at center
+    ^
+
+Ren'Py Version: Ren'Py 7.4.0.1167
+Sun Jan  3 13:01:18 2021
