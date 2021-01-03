@@ -1,8 +1,10 @@
-## Figure out how scripting works goddamnit
 label characters:
     ## Reference ##########
     ## define aradia = Character("Aradia")
-    ## image aradia soft smile = Image("game\images\chr\aradia_soft-smile.png", ypos=730)
+    ## image aradia soft smile = Image(
+    ## "game\images\chr\aradia_soft-smile.png",
+    ## ypos=730
+    ## )
 
     ##Amy Rose
     define amy = Character("Amy")
