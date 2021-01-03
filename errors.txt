@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/groovyTrainCafe.rpy", line 31: expected 'simple_expression' not found.
+    easein
+          ^
+
+Ren'Py Version: Ren'Py 7.4.0.1167
+Sun Jan  3 10:19:07 2021

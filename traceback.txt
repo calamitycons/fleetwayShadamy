@@ -1,0 +1,34 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+Executing ATL code at game/groovyTrainCafe.rpy:31
+  File "game/groovyTrainCafe.rpy", line 30, in script
+    show ebony:
+TypeError: unsupported operand type(s) for /: 'int' and 'ATLTransform'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/groovyTrainCafe.rpy", line 30, in script
+    show ebony:
+  File "renpy/ast.py", line 1182, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "renpy/ast.py", line 1152, in show_imspec
+    atl=atl)
+  File "renpy/exports.py", line 753, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
+  File "renpy/display/core.py", line 1103, in add
+    thing._show()
+  File "renpy/display/transform.py", line 1117, in _show
+    super(ATLTransform, self)._show()
+  File "renpy/display/transform.py", line 1086, in _show
+    self.update_state()
+  File "renpy/display/transform.py", line 1105, in update_state
+    fr = self.execute(self, self.st, self.at)
+  File "renpy/atl.py", line 631, in execute
+    action, arg, pause = block.execute(trans, timebase, self.atl_state, events)
+  File "renpy/atl.py", line 838, in execute
+    action, arg, pause = stmt.execute(trans, target - start, child_state, events)
+  File "renpy/atl.py", line 1195, in execute
+    complete = min(1.0, st / self.duration)
+TypeError: unsupported operand type(s) for /: 'int' and 'ATLTransform'
+
