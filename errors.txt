@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/metalHarbor.rpy", line 17: expected 'comma or end of line' not found.
-    at center
-    ^
+File "game/groovyTrainCafe.rpy", line 33: expected 'comma or end of line' not found.
+    easein 0.3 at side_left
+               ^
 
 Ren'Py Version: Ren'Py 7.4.0.1167
-Sun Jan  3 13:01:18 2021
+Sun Jan  3 19:47:48 2021

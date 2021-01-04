@@ -1,8 +1,5 @@
 ﻿# The script of the game goes in this file.
 
-# Start a character script for organizational purposes
-jump characters
-
 # Initialize all backgrounds
 jump backgrounds
 

@@ -1,34 +1,54 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Executing ATL code at game/groovyTrainCafe.rpy:31
-  File "game/groovyTrainCafe.rpy", line 30, in script
-    show ebony:
-TypeError: unsupported operand type(s) for /: 'int' and 'ATLTransform'
+While running game code:
+  File "game/groovyTrainCafe.rpy", line 35, in script
+    ebony "Hello yes this is cat."
+AttributeError: 'NoneType' object has no attribute 'style'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/groovyTrainCafe.rpy", line 30, in script
-    show ebony:
-  File "renpy/ast.py", line 1182, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "renpy/ast.py", line 1152, in show_imspec
-    atl=atl)
-  File "renpy/exports.py", line 753, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "renpy/display/core.py", line 1103, in add
-    thing._show()
-  File "renpy/display/transform.py", line 1117, in _show
-    super(ATLTransform, self)._show()
-  File "renpy/display/transform.py", line 1086, in _show
-    self.update_state()
-  File "renpy/display/transform.py", line 1105, in update_state
-    fr = self.execute(self, self.st, self.at)
-  File "renpy/atl.py", line 631, in execute
-    action, arg, pause = block.execute(trans, timebase, self.atl_state, events)
-  File "renpy/atl.py", line 838, in execute
-    action, arg, pause = stmt.execute(trans, target - start, child_state, events)
-  File "renpy/atl.py", line 1195, in execute
-    complete = min(1.0, st / self.duration)
-TypeError: unsupported operand type(s) for /: 'int' and 'ATLTransform'
+  File "game/groovyTrainCafe.rpy", line 35, in script
+    ebony "Hello yes this is cat."
+  File "renpy/ast.py", line 706, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "renpy/exports.py", line 1384, in say
+    who(what, *args, **kwargs)
+  File "renpy/character.py", line 1179, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "renpy/character.py", line 851, in do_display
+    **display_args)
+  File "renpy/character.py", line 601, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2978, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "renpy/display/core.py", line 3477, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "renpy/display/core.py", line 2359, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 751, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 751, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 751, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/transform.py", line 927, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 116, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/transition.py", line 904, in render
+    top = render(self.top, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 222, in renpy.display.render.render
+AttributeError: 'NoneType' object has no attribute 'style'
 

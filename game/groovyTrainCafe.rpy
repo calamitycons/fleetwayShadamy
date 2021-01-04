@@ -13,27 +13,29 @@ label groovyTrainCafe:
         jump gtcHero
     else:
         # Placeholder, checking to see if the function works.
-        show bob:
-            easein 0.3 side_right
+        show bob at speaking with easeinright
 
         bob "This is bob on the right."
         bob "I am here to see if the functions all work correctly."
         bob "You are neither injured, nor is sonic arrested."
+        show bob at stopspeaking
+
         bob "..."
+        show bob at speaking
+
         bob "Okay see ya."
 
         return
 
     label gtcHero:
         # Here comes Ebony
-        show ebony:
-            easein 0.5 side_left
+        show ebony at side_left with easeinleft
 
         ebony "Hello yes this is cat."
         ebony "You gonna turn on another variable or not?"
 
         menu:
-            "You gonna turn on another variable or not?"
+            "You gonna turn on another variable or not?{fast}"
 
             "Sonic goes to jail.":
                 $ sonicArrested = True
@@ -48,8 +50,7 @@ label groovyTrainCafe:
     label gtcDark:
 
         # Placeholder, checking to see if the function works.
-        show bob:
-            easein 0.3 side_left
+        show bob at side_left with easeinright
 
         bob "This is bob. You fucked it."
 
