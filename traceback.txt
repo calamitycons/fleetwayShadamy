@@ -1,34 +1,62 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Executing ATL code at game/groovyTrainCafe.rpy:31
-  File "game/groovyTrainCafe.rpy", line 30, in script
-    show ebony:
-TypeError: unsupported operand type(s) for /: 'int' and 'ATLTransform'
+While running game code:
+  File "renpy/common/00keymap.rpy", line 459, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 459, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 459, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 478, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/groovyTrainCafe.rpy", line 30, in script
-    show ebony:
-  File "renpy/ast.py", line 1182, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "renpy/ast.py", line 1152, in show_imspec
-    atl=atl)
-  File "renpy/exports.py", line 753, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "renpy/display/core.py", line 1103, in add
-    thing._show()
-  File "renpy/display/transform.py", line 1117, in _show
-    super(ATLTransform, self)._show()
-  File "renpy/display/transform.py", line 1086, in _show
-    self.update_state()
-  File "renpy/display/transform.py", line 1105, in update_state
-    fr = self.execute(self, self.st, self.at)
-  File "renpy/atl.py", line 631, in execute
-    action, arg, pause = block.execute(trans, timebase, self.atl_state, events)
-  File "renpy/atl.py", line 838, in execute
-    action, arg, pause = stmt.execute(trans, target - start, child_state, events)
-  File "renpy/atl.py", line 1195, in execute
-    complete = min(1.0, st / self.duration)
-TypeError: unsupported operand type(s) for /: 'int' and 'ATLTransform'
+  File "renpy/bootstrap.py", line 326, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 505, in main
+    if renpy.parser.report_parse_errors():
+  File "renpy/parser.py", line 2955, in report_parse_errors
+    renpy.display.error.report_parse_errors(full_text, error_fn)
+  File "renpy/display/error.py", line 192, in report_parse_errors
+    error_fn=error_fn,
+  File "renpy/game.py", line 282, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "renpy/display/error.py", line 46, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2978, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "renpy/display/core.py", line 3441, in interact_core
+    renpy.loader.check_autoreload()
+  File "renpy/loader.py", line 1097, in check_autoreload
+    renpy.exports.reload_script()
+  File "renpy/exports.py", line 1810, in reload_script
+    renpy.game.call_in_new_context("_save_reload_game")
+  File "renpy/game.py", line 333, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "renpy/execution.py", line 922, in run_context
+    context.run()
+  File "renpy/common/00keymap.rpy", line 459, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 459, in script
+    python hide:
+  File "renpy/ast.py", line 913, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2111, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 459, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 478, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "renpy/loadsave.py", line 392, in save
+    roots = renpy.game.log.freeze(None)
+  File "renpy/python.py", line 2008, in freeze
+    self.complete(False)
+  File "renpy/python.py", line 1614, in complete
+    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
+AttributeError: 'NoneType' object has no attribute 'stores'
 
