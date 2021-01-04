@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/groovyTrainCafe.rpy", line 33: expected 'comma or end of line' not found.
-    easein 0.3 at side_left
-               ^
+File "game/storyProgression/groovyTrainCafe.rpy", line 39: expected statement.
+    behind show shadow injured at side_right with easeinright
+    ^
 
 Ren'Py Version: Ren'Py 7.4.0.1167
-Sun Jan  3 19:47:48 2021
+Sun Jan  3 20:54:22 2021

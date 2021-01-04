@@ -1,54 +1,62 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/groovyTrainCafe.rpy", line 35, in script
-    ebony "Hello yes this is cat."
-AttributeError: 'NoneType' object has no attribute 'style'
+  File "renpy/common/00keymap.rpy", line 459, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 459, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 459, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 478, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/groovyTrainCafe.rpy", line 35, in script
-    ebony "Hello yes this is cat."
-  File "renpy/ast.py", line 706, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1384, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1179, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 851, in do_display
-    **display_args)
-  File "renpy/character.py", line 601, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/bootstrap.py", line 326, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 505, in main
+    if renpy.parser.report_parse_errors():
+  File "renpy/parser.py", line 2955, in report_parse_errors
+    renpy.display.error.report_parse_errors(full_text, error_fn)
+  File "renpy/display/error.py", line 192, in report_parse_errors
+    error_fn=error_fn,
+  File "renpy/game.py", line 282, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "renpy/display/error.py", line 46, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
   File "renpy/ui.py", line 298, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "renpy/display/core.py", line 2978, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "renpy/display/core.py", line 3477, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "renpy/display/core.py", line 2359, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 751, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 751, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 751, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/transform.py", line 927, in render
-    return transform_render(self, width, height, st, at)
-  File "accelerator.pyx", line 116, in renpy.display.accelerator.transform_render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/transition.py", line 904, in render
-    top = render(self.top, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 222, in renpy.display.render.render
-AttributeError: 'NoneType' object has no attribute 'style'
+  File "renpy/display/core.py", line 3441, in interact_core
+    renpy.loader.check_autoreload()
+  File "renpy/loader.py", line 1097, in check_autoreload
+    renpy.exports.reload_script()
+  File "renpy/exports.py", line 1810, in reload_script
+    renpy.game.call_in_new_context("_save_reload_game")
+  File "renpy/game.py", line 333, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "renpy/execution.py", line 922, in run_context
+    context.run()
+  File "renpy/common/00keymap.rpy", line 459, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 459, in script
+    python hide:
+  File "renpy/ast.py", line 913, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2111, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 459, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 478, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "renpy/loadsave.py", line 392, in save
+    roots = renpy.game.log.freeze(None)
+  File "renpy/python.py", line 2008, in freeze
+    self.complete(False)
+  File "renpy/python.py", line 1614, in complete
+    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
+AttributeError: 'NoneType' object has no attribute 'stores'
 

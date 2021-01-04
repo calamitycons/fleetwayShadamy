@@ -222,7 +222,7 @@ transform outofbreath:
 # Transforms to indicating speaking character(s)
 
 transform speaking:
-    easein 0.1 zoom 1.01
+    easein 0.1 zoom 1.03
 
 transform stopspeaking:
     easein 0.1 zoom 1
@@ -258,5 +258,6 @@ transform stopspeakingtodefault:
         linear 0.14 yoffset 10
 
 # Utility
+
 transform invisible:
     alpha 0.0
