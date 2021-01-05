@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/storyProgression/groovyTrainCafe.rpy", line 39: expected statement.
-    behind show shadow injured at side_right with easeinright
-    ^
+File "game/customScripts/storyFlags.rpy", line 1: init statement expects a non-empty block.
+    init -1:
+            ^
 
 Ren'Py Version: Ren'Py 7.4.0.1167
-Sun Jan  3 20:54:22 2021
+Tue Jan  5 16:21:20 2021

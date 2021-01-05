@@ -1,5 +1,5 @@
-label start:
-
+label prisonIsland:
+    
     scene prisonIsland
 
     show amy at side_right with moveinright
@@ -22,10 +22,8 @@ label start:
         "Intervene":
             # Activate shadow's Injured flag
             $ injured = True
-            show shadow injured at side_left
+            show shadow at side_left
 
             shadow "I'm going to pass out now."
 
             jump groovyTrainCafe
-
-"If you're here something went wrong, try again."
