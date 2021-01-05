@@ -34,9 +34,9 @@ label groovyTrainCafe:
 
         # First incoming amy, then in comes shadow
         show amy at default with easeinright
-        show shadow injured at side_right with easeinright
+        show shadow at side_right with easeinright
 
-        show shadow injured at breathing
+        show shadow at breathing
         show amy at speaking
         amy "I'm sorry, Ebony, I know I ask a lot from you."
         show amy at stopspeaking
