@@ -37,22 +37,14 @@ label groovyTrainCafe:
         show shadow at side_right with easeinright
 
         show shadow at breathing
-        show amy at speaking
-        amy "I'm sorry, Ebony, I know I ask a lot from you."
-        show amy at stopspeaking
+        amy @ speaking "I'm sorry, Ebony, I know I ask a lot from you."
 
-        show ebony at speaking
-        ebony "You really brought some trouble to my place, Amy."
-        show ebony at stopspeaking
+        ebony @ speaking "You really brought some trouble to my place, Amy."
 
-        show amy at speaking
-        amy "I know! But this is important."
+        amy @ speaking "I know! But this is important."
         amy "Can you help me get him somewhere safe?"
-        show amy at stopspeaking
 
-        show ebony at speaking
-        ebony "I'm sorry, Ebony, I know I ask a lot from you."
-        show ebony at stopspeaking
+        ebony @ speaking "Grumble..."
 
         return
 

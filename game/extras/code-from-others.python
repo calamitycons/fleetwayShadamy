@@ -1,0 +1,19 @@
+# Pseudocode by Salvr
+#
+# def get_pose(character, pose): return Image("images/%s/%s.png" %
+# (character.status, pose))
+#
+# %s means read a string
+# here it means that the program is told to read string 2 times, from
+# the arguments, in Mad's code type and pose
+# so when it is getting images and the type is example1 and the pose is
+# example2
+# it will go to images/example1/example2.png
+#########################################################################
+# Pseudocode by Mad
+#
+#   init python: def get_pose(character, pose): type = "standard"
+#
+#       if injured: type = "injured"
+#
+#       return Image("images/%s/%s.png" % (type, pose))

@@ -1,9 +1,8 @@
 label prisonIsland:
-    
+
     scene prisonIsland
 
     show amy at side_right with moveinright
-
     show shadow at side_left with moveinleft
 
     # These display lines of dialogue.
@@ -24,6 +23,6 @@ label prisonIsland:
             $ injured = True
             show shadow at side_left
 
-            shadow "I'm going to pass out now."
+            shadow "My injury status is [injured]"
 
             jump groovyTrainCafe

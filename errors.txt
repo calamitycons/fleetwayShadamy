@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/customScripts/storyFlags.rpy", line 1: init statement expects a non-empty block.
-    init -1:
-            ^
+File "game/customScripts/people/shadow.rpy", line 18: Line is indented, but the preceding image statement statement does not expect a block. Please check this line's indentation.
+    show shadow injured
+    ^
 
 Ren'Py Version: Ren'Py 7.4.0.1167
-Tue Jan  5 16:21:20 2021
+Tue Jan  5 20:50:20 2021

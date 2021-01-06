@@ -1,18 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/main.rpy", line 7, in script
-    jump prisonIsland
-ScriptError: could not find label 'prisonIsland'.
+  File "game/customScripts/people/shadow.rpy", line 14, in script
+    image shadow = getPose("injured", "default")
+  File "game/customScripts/people/shadow.rpy", line 14, in script
+    image shadow = getPose("injured", "default")
+  File "game/customScripts/people/shadow.rpy", line 14, in <module>
+    image shadow = getPose("injured", "default")
+TypeError: getPose() takes exactly 3 arguments (2 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/main.rpy", line 7, in script
-    jump prisonIsland
-  File "renpy/ast.py", line 1702, in execute
-    rv = renpy.game.script.lookup(target)
-  File "renpy/script.py", line 900, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'prisonIsland'.
+  File "renpy/bootstrap.py", line 326, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 515, in main
+    renpy.game.context().run(node)
+  File "game/customScripts/people/shadow.rpy", line 14, in script
+    image shadow = getPose("injured", "default")
+  File "game/customScripts/people/shadow.rpy", line 14, in script
+    image shadow = getPose("injured", "default")
+  File "renpy/ast.py", line 1012, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "renpy/python.py", line 2135, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/customScripts/people/shadow.rpy", line 14, in <module>
+    image shadow = getPose("injured", "default")
+TypeError: getPose() takes exactly 3 arguments (2 given)
 
