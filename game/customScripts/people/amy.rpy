@@ -1,5 +1,6 @@
-# Amy Rose
-define amy = Character("Amy")
+# Define Amy as a Character object
+define amy = Character("Amy", image="amy")
 
-# Poses
-image amy = Image("images/chr/amy.png")
+image amy = ConditionSwitch(
+    "injured == True", "images/chr/amy/canon.png",
+    "True", "images/chr/amy/default.png")

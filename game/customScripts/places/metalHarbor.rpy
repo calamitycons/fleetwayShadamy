@@ -13,7 +13,7 @@ label metalHarbor:
         "Fucked it up.":
             $ sonicArrested = True
 
-            show bob at center
+            show bob at side_center
 
             bob "lol bye."
 

@@ -35,23 +35,23 @@ define openeyes = ImageDissolve("/images/fx/eye2.png", 0.8, ramplen=64, time_war
 
 transform default:
     xalign 0.5
-    ypos 500
+    yalign 1.0
 
 transform center:
     xalign 0.5
-    ypos 500
+    yalign 0.5
 
 transform side_center:
     xalign 0.5
-    ypos 500
+    yalign 1.0
 
 transform side_left:
     xalign 0.2
-    ypos 500
+    yalign 1.0
 
 transform side_right:
     xalign 0.8
-    ypos 500
+    yalign 1.0
 
 transform height(y):
     ypos y

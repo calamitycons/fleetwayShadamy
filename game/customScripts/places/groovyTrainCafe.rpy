@@ -34,17 +34,18 @@ label groovyTrainCafe:
 
         # First incoming amy, then in comes shadow
         show amy at default with easeinright
-        show shadow at side_right with easeinright
+        show shad injured at side_right with easeinright
 
-        show shadow at breathing
-        amy @ speaking "I'm sorry, Ebony, I know I ask a lot from you."
+        show shad at breathing
+        show amy at speaking
+        "I'm sorry, Ebony, I know I ask a lot from you."
 
-        ebony @ speaking "You really brought some trouble to my place, Amy."
+        ebony "You really brought some trouble to my place, Amy."
 
-        amy @ speaking "I know! But this is important."
+        amy "I know! But this is important."
         amy "Can you help me get him somewhere safe?"
 
-        ebony @ speaking "Grumble..."
+        ebony "Grumble..."
 
         return
 

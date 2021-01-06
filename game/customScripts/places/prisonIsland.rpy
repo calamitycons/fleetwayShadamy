@@ -2,10 +2,14 @@ label prisonIsland:
 
     scene prisonIsland
 
-    show amy at side_right with moveinright
-    show shadow at side_left with moveinleft
+    show amy at side_left with moveinleft
+    show shad:
+        side_right
+        flipped
+    with moveinright
 
     # These display lines of dialogue.
+    shadow "My injury status is [injured]"
     amy "Time for the big plot."
     shadow "Okay."
 
@@ -21,7 +25,7 @@ label prisonIsland:
         "Intervene":
             # Activate shadow's Injured flag
             $ injured = True
-            show shadow at side_left
+            show shad at side_left
 
             shadow "My injury status is [injured]"
 
