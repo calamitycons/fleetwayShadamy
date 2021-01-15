@@ -2,7 +2,13 @@
 # - visual polish can happen last, focus on coding and making sure the
 #    templates work correctly
 # - Create a dialog tree system for all dialog
-# - Fix the character transition
+# - Fix the character transitions
+
+#### ANIMATIONS NEEDED: ####
+#### Bobbing up and down as though floating
+#### Shaking like a leaf
+#### Particle effects such as damage smoke and sparking
+#### Aiming reticle
 
 ### Jan 06 2021 ###
 # When you need to apply two transforms onto a character, you write it like this:
