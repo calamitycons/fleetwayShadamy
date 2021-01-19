@@ -15,3 +15,4 @@ label testRoom:
                 "I'm working on it. cruelOrKind is [cruelOrKind]"
 
     "Now it is at 10. Good job."
+    jump ironGate

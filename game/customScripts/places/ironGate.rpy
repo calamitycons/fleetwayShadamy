@@ -5,8 +5,8 @@ label ironGate:
     "You've just woken up to the pitch blackness of a stasis pod."
 
     menu firstChoice:
-        "[pick]Examine self":
-            $ cunning += 1
+        "Examine self":
+            $ proudOrCunning += assignWithinLimit(1)
             "You are Shadow the Hedgehog, the world's Ultimate Life Form born and raised aboard the Space Colony ARK."
             "You check your wrists and- Ah, what a relief. Your inhibitor rings are still there."
             # the world shudders and pulses
@@ -14,8 +14,8 @@ label ironGate:
             "You grasp your mouth and swallow against the churning of your empty stomach."
             "How long have you been in stasis? Were you improperly activated? Your body shouldn't notice time has passed when properly released."
 
-        "[pick]Spark a light source":
-            $ pride += 1
+        "Spark a light source":
+            $ proudOrCunning -= assignWithinLimit(1)
             scene smallLight
             "You create a light within your palms."
             # make the whole world shudder and pulse
@@ -35,11 +35,11 @@ label ironGate:
     "They both seem very loud and obnoxious."
 
     menu:
-        "[pick]Exit from the top.":
+        "Exit from the top.":
             $ heroScore += 0.5
             $ shadamy += 1
             shad "Now I have met Amy Rose. Hero Score is [heroScore]"
-        "[pick]Exit from the bottom.":
+        "Exit from the bottom.":
             $ darkScore += 0.5
             shadow "Hello Doctor. Dark Score is [darkScore]"
 
@@ -49,7 +49,7 @@ label ironGate:
     shad "Stupid humans."
 
     menu:
-        "[pick]Intervene":
+        "Intervene":
             $ heroScore += 1
             shad "Now I have [heroScore] Hero Score"
             "Then Shadow gets stabbed in the forehead by a piece of shrapnel!"
@@ -58,7 +58,7 @@ label ironGate:
             "You pass out from the pain."
             jump groovyTrainCafe
 
-        "[pick]Escape":
+        "Escape":
             $ darkScore += 1
             shad "Now I have [darkScore] Dark Score"
             if shadamy > 0:
@@ -72,7 +72,7 @@ label conscience:
     "You grab the Chaos Emerald but you feel guilty about abandoning Amy."
 
     menu:
-        "[pick]Go back for her.":
+        "Go back for her.":
             $ heroScore += 2
             $ shadamy += 2
             "She's in the middle of reloading her crossbow when you use the Chaos Emerald to teleport behind her."
@@ -81,7 +81,7 @@ label conscience:
             shadow "Chaos Control!"
             jump prisonIsland
 
-        "[pick]Escape":
+        "Escape":
             $ darkScore += 2
             shadow "Chaos Control!"
             jump metalHarbor
