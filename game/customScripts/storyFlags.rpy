@@ -31,27 +31,22 @@ default shadamy = 0  # But do YOU trust her back?
 # Following code provided by @Salvr on Discord
 ################################################################################
 
-$ statMIN = -10
-$ statMAX = 10
+init python:
+    def assignWithinLimit(newValue, statMIN=-10, statMAX=10):
+        return min(max(newValue, statMIN), statMAX)
 
-def assignWithinLimit(newValue, statMIN, statMAX):
-    return min(max(newValue, statMIN), statMAX)
-
-def assignWithUpperLimit(newValue, 0, statMAX):
-    return min(max(newValue, statMIN), statMAX)
-
-default silence = assignWithUpperLimit(0)
+default silence = 0
 # Shadow will be silent and watch rather than activate a dialog choice. If
 # he MUST say something, this won't apply, but if this number is too high he
 # will stop participating in conversation until prompted.
 
-default injury = assignWithUpperLimit(0)
+default injury = 0
 # Shadow can't do something physical, so he's forced to rest/engage in
 # conversation instead. This leads to more opportunities to talk to people,
 # or you can just sleep.
 
-default cruelOrKind = assignWithinLimit(0)
+default cruelOrKind = 0
 # Will he say be arrogant or offer compassion?
 
-default proudOrCunning = assignWithinLimit(0)
+default proudOrCunning = 0
 # Does he go fast and fight, or slow down and think?

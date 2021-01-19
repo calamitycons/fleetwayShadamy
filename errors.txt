@@ -2,13 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/customScripts/storyFlags.rpy", line 37: expected statement.
-    def assignWithinLimit(newValue, statMIN, statMAX):
-                         ^
+File "game/customScripts/places/testRoom.rpy", line 8: menu statement expects a non-empty block.
+    menu:
+        ^
 
-File "game/customScripts/storyFlags.rpy", line 40: expected statement.
-    def assignWithUpperLimit(newValue, 0, statMAX):
-                            ^
+File "game/customScripts/places/testRoom.rpy", line 10: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    "make cruelOrKind 100":
+    ^
 
 Ren'Py Version: Ren'Py 7.4.0.1167
-Tue Jan 19 15:21:24 2021
+Tue Jan 19 17:06:05 2021

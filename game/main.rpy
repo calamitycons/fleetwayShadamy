@@ -1,5 +1,5 @@
 label start:
 
-    jump ironGate
+    jump testRoom
 
 return
