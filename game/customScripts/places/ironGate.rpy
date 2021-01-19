@@ -38,7 +38,7 @@ label ironGate:
         "[pick]Exit from the top.":
             $ heroScore += 0.5
             $ shadamy += 1
-            shadow "Now I have met Amy Rose. Hero Score is [heroScore]"
+            shad "Now I have met Amy Rose. Hero Score is [heroScore]"
         "[pick]Exit from the bottom.":
             $ darkScore += 0.5
             shadow "Hello Doctor. Dark Score is [darkScore]"
@@ -46,22 +46,26 @@ label ironGate:
     "Oh shit Big Foot's here now."
     "And it just goes straight to the fight."
     "Amy wants to mediate but nobody listens."
-    "Stupid humans."
+    shad "Stupid humans."
 
     menu:
         "[pick]Intervene":
             $ heroScore += 1
-            shadow "Now I have [heroScore] Hero Score"
+            shad "Now I have [heroScore] Hero Score"
+            "Then Shadow gets stabbed in the forehead by a piece of shrapnel!"
+            shad "OW!"
+            $ injury += 100
+            "You pass out from the pain."
             jump groovyTrainCafe
 
         "[pick]Escape":
             $ darkScore += 1
-            shadow "Now I have [darkScore] Dark Score"
+            shad "Now I have [darkScore] Dark Score"
             if shadamy > 0:
                 jump conscience
 
             else:
-                shadow "Because I don't know Amy and she does not know me, I'll just leave."
+                shad "Because I don't know Amy and she does not know me, I'll just leave."
                 jump metalHarbor
 
 label conscience:
@@ -76,7 +80,7 @@ label conscience:
             amy "Hey! Watch where you're grabbin'!"
             shadow "Chaos Control!"
             jump prisonIsland
-            
+
         "[pick]Escape":
             $ darkScore += 2
             shadow "Chaos Control!"

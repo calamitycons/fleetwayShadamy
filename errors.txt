@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/customScripts/places/prisonIsland.rpy", line 7: expected 'comma or end of line' not found.
-    at side_right
-    ^
+File "game/customScripts/storyFlags.rpy", line 37: expected statement.
+    def assignWithinLimit(newValue, statMIN, statMAX):
+                         ^
+
+File "game/customScripts/storyFlags.rpy", line 40: expected statement.
+    def assignWithUpperLimit(newValue, 0, statMAX):
+                            ^
 
 Ren'Py Version: Ren'Py 7.4.0.1167
-Wed Jan  6 14:28:37 2021
+Tue Jan 19 15:21:24 2021
