@@ -1,5 +1,5 @@
 label start:
 
-    jump prisonIsland
+    jump ironGate
 
 return
