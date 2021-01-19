@@ -6,17 +6,17 @@ init -1:
     default darkScore = 0
 
     # Relationship values
-    default amyTrust = 1 # Amy might not know you but she'll give you a chance
-    default shadamy = 0  # Kiss da girl
-
-    default sonicTrust = 0 # Sonic thinks you stink
-    default sonadow = 0 # Kiss the boy
-
-    default eggTrust = 0 # Eggman doesn't want to kiss you
+    # default amyTrust = 1 #
+    default shadamy = 0  # Amy might not know you but she'll give you a chance
+    #
+    # default sonicTrust = 0 # Sonic thinks you stink
+    # default sonadow = 0 # Kiss the boy
+    #
+    # default eggTrust = 0 # Eggman doesn't want to kiss you
 
     default yourePirate = 0 # Does Shadow the Hedgehog is Sky Pirate?
-    default firstMate = 0 # Kiss the robot pirates (Whisker and Johnny)
-    default shadouge = 0 # Kiss this one treasure hunter in particular
+    # default firstMate = 0 # Kiss the robot pirates (Whisker and Johnny)
+    # default shadouge = 0 # Kiss this one treasure hunter in particular
 
     # Personality values that affect shadow's
     # responses to things during narration.

@@ -36,17 +36,16 @@ label ironGate:
 
     menu:
         "[pick]Exit from the top.":
-            $ amyTrust += 1
-            $ eggTrust -= 1
-            shadow "Now I have met Amy Rose. I have [amyTrust] trust levels with her."
+            $ heroScore += 0.5
+            $ shadamy += 1
+            shadow "Now I have met Amy Rose. Hero Score is [heroScore]"
         "[pick]Exit from the bottom.":
-            $ eggTrust += 1
-            $ amyTrust -= 1
-            shadow "Now I have [eggTrust] trust levels with the Doctor."
+            $ darkScore += 0.5
+            shadow "Hello Doctor. Dark Score is [darkScore]"
 
     "Oh shit Big Foot's here now."
     "And it just goes straight to the fight."
-    "Amy tries to "
+    "Amy wants to mediate but nobody listens."
     "Stupid humans."
 
     menu:
@@ -58,24 +57,26 @@ label ironGate:
         "[pick]Escape":
             $ darkScore += 1
             shadow "Now I have [darkScore] Dark Score"
-            if amyTrust > 0:
+            if shadamy > 0:
                 jump conscience
 
             else:
-                shadow "Because I don't trust Amy and she does not trust me, I'll just leave."
+                shadow "Because I don't know Amy and she does not know me, I'll just leave."
                 jump metalHarbor
 
 label conscience:
-"You grab the Chaos Emerald but you feel guilty about abandoning Amy."
+    "You grab the Chaos Emerald but you feel guilty about abandoning Amy."
 
     menu:
         "[pick]Go back for her.":
             $ heroScore += 2
+            $ shadamy += 2
             "She's in the middle of reloading her crossbow when you use the Chaos Emerald to teleport behind her."
             "You undershoot your Z axis a little so you soften your descend with your rocket shoes."
-            amy "Hey! Watch where you grabbin'!"
+            amy "Hey! Watch where you're grabbin'!"
             shadow "Chaos Control!"
             jump prisonIsland
+            
         "[pick]Escape":
             $ darkScore += 2
             shadow "Chaos Control!"
