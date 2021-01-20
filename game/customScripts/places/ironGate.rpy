@@ -2,11 +2,21 @@ label ironGate:
 
     scene blackcover
 
+
     "You've just woken up to the pitch blackness of a stasis pod."
 
     menu firstChoice:
         "Examine self":
             $ proudOrCunning += assignWithinLimit(1)
+
+            "proudOrCunning is set to [proudOrCunning], which means you are..."
+            if proudOrCunning > 0:
+                "proud, rough, and impulsive"
+            elif proudOrCunning < 0:
+                "humble, gentle, and cunning"
+            else:
+                "neutral"
+
             "You are Shadow the Hedgehog, the world's Ultimate Life Form born and raised aboard the Space Colony ARK."
             "You check your wrists and- Ah, what a relief. Your inhibitor rings are still there."
             # the world shudders and pulses
@@ -17,6 +27,14 @@ label ironGate:
         "Spark a light source":
             $ proudOrCunning -= assignWithinLimit(1)
             scene smallLight
+            "proudOrCunning is set to [proudOrCunning], which means you are..."
+            if proudOrCunning > 0:
+                "proud, rough, and impulsive"
+            elif proudOrCunning < 0:
+                "humble, gentle, and cunning"
+            else:
+                "neutral"
+
             "You create a light within your palms."
             # make the whole world shudder and pulse
             scene blackcover
@@ -38,10 +56,10 @@ label ironGate:
         "Exit from the top.":
             $ heroScore += 0.5
             $ shadamy += 1
-            shad "Now I have met Amy Rose. Hero Score is [heroScore]"
+            shad "Now I have met Amy Rose. Hero Score is [heroScore]. Shadamy is [shadamy]"
         "Exit from the bottom.":
             $ darkScore += 0.5
-            shadow "Hello Doctor. Dark Score is [darkScore]"
+            shad "Hello Doctor. Dark Score is [darkScore]"
 
     "Oh shit Big Foot's here now."
     "And it just goes straight to the fight."
@@ -51,17 +69,18 @@ label ironGate:
     menu:
         "Intervene":
             $ heroScore += 1
+            $ proudOrCunning += 1
             shad "Now I have [heroScore] Hero Score"
             "Then Shadow gets stabbed in the forehead by a piece of shrapnel!"
             shad "OW!"
-            $ injury += 100
+            $ injury += assignWithinLimit(100)
             "You pass out from the pain."
             jump groovyTrainCafe
 
         "Escape":
             $ darkScore += 1
             shad "Now I have [darkScore] Dark Score"
-            if shadamy > 0:
+            if shadamy > 0 or proudOrCunning <= 0:
                 jump conscience
 
             else:
@@ -69,7 +88,15 @@ label ironGate:
                 jump metalHarbor
 
 label conscience:
-    "You grab the Chaos Emerald but you feel guilty about abandoning Amy."
+    "You grab the Chaos Emerald but..."
+    if shadamy >0:
+        "You feel guilty about abandoning Amy. She reminds you of someone. Someone you know you loved..."
+    elif proudOrCunning <= 0:
+        "Something about this situation is too suspicious. What was she doing here? Why does she care what the humans think?"
+        "The Doctor intends to use you to further his plots, which doesn't surprise you. The GUN agent piloting his Big Foot is under orders to detain you and clearly isn't interested in negotiating."
+        "If you leave without her, you may never get the answers you seek on your own."
+    else:
+        pass
 
     menu:
         "Go back for her.":
@@ -78,10 +105,13 @@ label conscience:
             "She's in the middle of reloading her crossbow when you use the Chaos Emerald to teleport behind her."
             "You undershoot your Z axis a little so you soften your descend with your rocket shoes."
             amy "Hey! Watch where you're grabbin'!"
-            shadow "Chaos Control!"
+            shad "Chaos Control!"
             jump prisonIsland
 
         "Escape":
             $ darkScore += 2
-            shadow "Chaos Control!"
+            $ shadamy -= 1
+            "You shake your head. You don't know her. You don't know why she claims to be allied with the humans. It's none of your business."
+            "You're not interested."
+            shad "Chaos Control!"
             jump metalHarbor

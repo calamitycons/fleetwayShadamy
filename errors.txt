@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/customScripts/places/testRoom.rpy", line 8: menu statement expects a non-empty block.
-    menu:
-        ^
-
-File "game/customScripts/places/testRoom.rpy", line 10: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    "make cruelOrKind 100":
+File "game/customScripts/places/ironGate.rpy", line 11: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
+    if proudOrCunning > 0:
     ^
 
 Ren'Py Version: Ren'Py 7.4.0.1167
-Tue Jan 19 17:06:05 2021
+Wed Jan 20 15:28:32 2021

@@ -4,6 +4,11 @@
 
 init offset = -1
 
+# Following code provided by @Salvr on Discord
+init python:
+    def assignWithinLimit(newValue, statMIN=-5, statMAX=5):
+        return min(max(newValue, statMIN), statMAX)
+
 ################################################################################
 ## Plot Values
 ################################################################################
@@ -28,12 +33,9 @@ default shadamy = 0  # But do YOU trust her back?
 ################################################################################
 # Personality values that affect shadow's responses in narration.
 # These rely on maximums and minimums
-# Following code provided by @Salvr on Discord
 ################################################################################
 
-init python:
-    def assignWithinLimit(newValue, statMIN=-10, statMAX=10):
-        return min(max(newValue, statMIN), statMAX)
+
 
 default silence = 0
 # Shadow will be silent and watch rather than activate a dialog choice. If
@@ -46,7 +48,7 @@ default injury = 0
 # or you can just sleep.
 
 default cruelOrKind = 0
-# Will he say be arrogant or offer compassion?
+# Will he be arrogant or offer compassion?
 
 default proudOrCunning = 0
 # Does he go fast and fight, or slow down and think?
