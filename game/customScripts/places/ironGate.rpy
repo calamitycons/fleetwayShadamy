@@ -1,56 +1,26 @@
 label ironGate:
 
     scene blackcover
+    # the sound of alarms from the other side of a wall
+    "The air you breathe in stabs your lungs after being in stasis for so long."
 
-
-    "You've just woken up to the pitch blackness of a stasis pod."
-
-    menu firstChoice:
-        "Examine self":
-            $ proudOrCunning += assignWithinLimit(1)
-
-            "proudOrCunning is set to [proudOrCunning], which means you are..."
-            if proudOrCunning > 0:
-                "proud, rough, and impulsive"
-            elif proudOrCunning < 0:
-                "humble, gentle, and cunning"
-            else:
-                "neutral"
-
-            "You are Shadow the Hedgehog, the world's Ultimate Life Form born and raised aboard the Space Colony ARK."
-            "You check your wrists and- Ah, what a relief. Your inhibitor rings are still there."
-            # the world shudders and pulses
-            "When you bend to check your ankles as well, you are overwhelmed with a sense of vertigo. Acid wells up in the back of your throat."
-            "You grasp your mouth and swallow against the churning of your empty stomach."
-            "How long have you been in stasis? Were you improperly activated? Your body shouldn't notice time has passed when properly released."
-
-        "Spark a light source":
-            $ proudOrCunning -= assignWithinLimit(1)
-            scene smallLight
-            "proudOrCunning is set to [proudOrCunning], which means you are..."
-            if proudOrCunning > 0:
-                "proud, rough, and impulsive"
-            elif proudOrCunning < 0:
-                "humble, gentle, and cunning"
-            else:
-                "neutral"
-
-            "You create a light within your palms."
-            # make the whole world shudder and pulse
-            scene blackcover
-            "Or you did, for about one second."
-            "The pain that spikes through your head is unbearable. You grasp your temples and press your fingers in. Your jaw trembles from how tightly you clench it."
-            # muffled sound of alarms from SA2
-            "When you release your vice around your head, you notice the sound of alarms from outside your prison. You can barely tolerate it."
-
-    "You don't get a chance to catch your breath before you feel a sharp scratch piercing the back of your neck..."
-
-    "The next time you're awakened from stasis it remains dark, but you hear voices from outside your pod."
-    "One voice from above your current location..."
-    "???" "Aw, nuts! Eggman's already unleashed the thing!"
-    "...And one from below you."
+    # Machinery moves around you
+    "You hear voices from outside your pod as the machinery around it pushes you up and out of your prison."
+    # Everything is bright for a while
+    scene whitecover
+    "???" "Stoppit right there, Eggman!"
     "???" "Don't you call me Eggman, hedgehog girl! I am Doctor ROBOTNIK, the most brilliant scientific genius in the world!"
-    "They both seem very loud and obnoxious."
+
+    # A splash screen of Eggman and Amy arguing with each other and ignoring
+    # Shadow.
+
+    "You are Shadow the Hedgehog, the world's Ultimate Lifeform..."
+
+    # A panel of Shadow balking in confusion at this scene slides in from the
+    # right.
+    "...Nobody's paying much attention to you right now, though."
+
+    egg "Don't be hasty with that crossbow, little brat."
 
     menu:
         "Exit from the top.":
