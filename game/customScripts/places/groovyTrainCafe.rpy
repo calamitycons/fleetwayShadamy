@@ -8,7 +8,7 @@ label groovyTrainCafe:
     scene groovyTrainCafe with dissolve
     "You are now in the groovy train."
 
-    if injured:
+    if injury > 0:
         # Go to the Hero path.
         jump gtcHero
     else:
@@ -34,7 +34,7 @@ label groovyTrainCafe:
 
         # First incoming amy, then in comes shadow
         show amy at default with easeinright
-        show shad injured at side_right with easeinright
+        show shad at side_right with easeinright
 
         show shad at breathing
         show amy at speaking

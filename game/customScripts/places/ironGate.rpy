@@ -1,65 +1,46 @@
 label ironGate:
 
     scene blackcover
+    # the sound of alarms from the other side of a wall
+    "The air you breathe in stabs your lungs after being in stasis for so long."
 
-
-    "You've just woken up to the pitch blackness of a stasis pod."
-
-    menu firstChoice:
-        "Examine self":
-            $ proudOrCunning += assignWithinLimit(1)
-
-            "proudOrCunning is set to [proudOrCunning], which means you are..."
-            if proudOrCunning > 0:
-                "proud, rough, and impulsive"
-            elif proudOrCunning < 0:
-                "humble, gentle, and cunning"
-            else:
-                "neutral"
-
-            "You are Shadow the Hedgehog, the world's Ultimate Life Form born and raised aboard the Space Colony ARK."
-            "You check your wrists and- Ah, what a relief. Your inhibitor rings are still there."
-            # the world shudders and pulses
-            "When you bend to check your ankles as well, you are overwhelmed with a sense of vertigo. Acid wells up in the back of your throat."
-            "You grasp your mouth and swallow against the churning of your empty stomach."
-            "How long have you been in stasis? Were you improperly activated? Your body shouldn't notice time has passed when properly released."
-
-        "Spark a light source":
-            $ proudOrCunning -= assignWithinLimit(1)
-            scene smallLight
-            "proudOrCunning is set to [proudOrCunning], which means you are..."
-            if proudOrCunning > 0:
-                "proud, rough, and impulsive"
-            elif proudOrCunning < 0:
-                "humble, gentle, and cunning"
-            else:
-                "neutral"
-
-            "You create a light within your palms."
-            # make the whole world shudder and pulse
-            scene blackcover
-            "Or you did, for about one second."
-            "The pain that spikes through your head is unbearable. You grasp your temples and press your fingers in. Your jaw trembles from how tightly you clench it."
-            # muffled sound of alarms from SA2
-            "When you release your vice around your head, you notice the sound of alarms from outside your prison. You can barely tolerate it."
-
-    "You don't get a chance to catch your breath before you feel a sharp scratch piercing the back of your neck..."
-
-    "The next time you're awakened from stasis it remains dark, but you hear voices from outside your pod."
-    "One voice from above your current location..."
-    "???" "Aw, nuts! Eggman's already unleashed the thing!"
-    "...And one from below you."
+    # Machinery moves around you
+    "You hear voices from outside your pod as the machinery around it pushes you up and out of your prison."
+    # Everything is bright for a while
+    scene whitecover
+    "???" "Stoppit right there, Eggman!"
     "???" "Don't you call me Eggman, hedgehog girl! I am Doctor ROBOTNIK, the most brilliant scientific genius in the world!"
-    "They both seem very loud and obnoxious."
+
+    # A splash screen of Eggman and Amy arguing with each other and ignoring
+    # Shadow.
+
+    "You are Shadow the Hedgehog, the world's Ultimate Lifeform..."
+
+    egg "Don't be hasty with that crossbow, little lady. You might hurt someone. Here, let me take it off your hands!"
+    "Eggman shoots a small missile out of his egg walker."
+    "With pinpoint accuracy, the hedgehog girl shoots it right out of the air with a crossbow bolt."
+    amy "They don't call me Aiming for nothing, Ro-butt-nik!"
+    egg "That nickname is even worse!"
+
+    # A panel of Shadow balking in confusion at this scene slides in from the
+    # right.
+    "...Neither of them seem interested in you though."
 
     menu:
-        "Exit from the top.":
-            $ heroScore += 0.5
-            $ shadamy += 1
-            shad "Now I have met Amy Rose. Hero Score is [heroScore]. Shadamy is [shadamy]"
-        "Exit from the bottom.":
-            $ darkScore += 0.5
-            shad "Hello Doctor. Dark Score is [darkScore]"
+        "Stay quiet and watch.":
+            $ proudOrCunning -= 1
+            "You stand back and watch them argue."
+            jump standBack
+        "Bark at them.":
+            $ proudOrCunning += 1
+            shad "Which one of you released me from stasis?"
+            jump barkAtThem
+
+label standBack:
+    "Shadow's proud or cunning stat is now [proudOrCunning]."
+
+label barkAtThem:
+    "Shadow's proud or cunning stat is now [proudOrCunning]."
 
     "Oh shit Big Foot's here now."
     "And it just goes straight to the fight."
