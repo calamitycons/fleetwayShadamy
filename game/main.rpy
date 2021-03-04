@@ -1,5 +1,9 @@
 label start:
 
-    jump ironGate
+    menu:
+        "Begin.":
+            jump ironGate
+        "Hold up.":
+            jump testRoom
 
 return

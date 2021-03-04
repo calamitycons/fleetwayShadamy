@@ -1,32 +1,54 @@
-init -1:
+################################################################################
+## Initialization
+################################################################################
 
-    # These determine some of Shadow's reactions to events and can disable
-    # future dialog choices if the score is too high
-    default heroScore = 0
-    default darkScore = 0
+init offset = -1
 
-    # Relationship values
-    default amyTrust = 1 # Amy might not know you but she'll give you a chance
-    default shadamy = 0  # Kiss da girl
+# Following code provided by @Salvr on Discord
+init python:
+    def assignWithinLimit(newValue, statMIN=-5, statMAX=5):
+        return min(max(newValue, statMIN), statMAX)
 
-    default sonicTrust = 0 # Sonic thinks you stink
-    default sonadow = 0 # Kiss the boy
+################################################################################
+## Plot Values
+################################################################################
 
-    default eggTrust = 0 # Eggman doesn't want to kiss you
+# These determine some of Shadow's reactions to events and can disable
+# or automate future choices if the score is high
+default darkScore = 0 # Black hearted evil?
+default heroScore = 0 # Brave hearted hero?
 
-    default yourePirate = 0 # Does Shadow the Hedgehog is Sky Pirate?
-    default firstMate = 0 # Kiss the robot pirates (Whisker and Johnny)
-    default shadouge = 0 # Kiss this one treasure hunter in particular
+# Story-crucial booleans that dramatically change a lot of important story
+# beats such as who is where, and where to go next
+default amnesia = False # disables certain dialog options
+default sonicArrested = False # changes if Sonic is available or not
+default yourePirate = False # Does Shadow the Hedgehog is Sky Pirate?
 
-    # Personality values that affect shadow's
-    # responses to things during narration.
-    default silence = 0 # Sometimes Shadow will just choose not to say anything
-    default injury = 0 # Shadow's body won't cooperate because it hurts too much
-    default cruelty = 0 # Will he say mean and pompous things?
-    default kindness = 0 # Will he offer compassion?
-    default pride = 0 # Does he wanna FITE?
-    default cunning = 0 # Does he notice when he's being tricked or manipulated?
+# Relationship values
+default amyTrust = 1 # Amy trusts strangers b/c she's like that
+default shadamy = 0  # But do YOU trust her back?
 
-    # Story-crucial booleans that dramatically change a lot of important things
-    default amnesia = False
-    default sonicArrested = False
+################################################################################
+## Social Values
+################################################################################
+# Personality values that affect shadow's responses in narration.
+# These rely on maximums and minimums
+################################################################################
+
+
+
+default silence = 0
+# Shadow will be silent and watch rather than activate a dialog choice. If
+# he MUST say something, this won't apply, but if this number is too high he
+# will stop participating in conversation until prompted.
+
+default injury = 0
+# Shadow can't do something physical, so he's forced to rest/engage in
+# conversation instead. This leads to more opportunities to talk to people,
+# or you can just sleep.
+
+default cruelOrKind = 0
+# Will he be arrogant or offer compassion?
+
+default proudOrCunning = 0
+# Does he go fast and fight, or slow down and think?
