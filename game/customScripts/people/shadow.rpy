@@ -1,4 +1,4 @@
 # Shadow the Hedgehog
-define shad = Character("Shadow", image="shadow")
+define shad = Character("Shadow", image="shad")
 
-image shadow = Image("images/chr/shadow/default/default.png")
+image shad = Image("images/chr/shadow/default/default.png")

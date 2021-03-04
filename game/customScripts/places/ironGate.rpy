@@ -16,20 +16,31 @@ label ironGate:
 
     "You are Shadow the Hedgehog, the world's Ultimate Lifeform..."
 
+    egg "Don't be hasty with that crossbow, little lady. You might hurt someone. Here, let me take it off your hands!"
+    "Eggman shoots a small missile out of his egg walker."
+    "With pinpoint accuracy, the hedgehog girl shoots it right out of the air with a crossbow bolt."
+    amy "They don't call me Aiming for nothing, Ro-butt-nik!"
+    egg "That nickname is even worse!"
+
     # A panel of Shadow balking in confusion at this scene slides in from the
     # right.
-    "...Nobody's paying much attention to you right now, though."
-
-    egg "Don't be hasty with that crossbow, little brat."
+    "...Neither of them seem interested in you though."
 
     menu:
-        "Exit from the top.":
-            $ heroScore += 0.5
-            $ shadamy += 1
-            shad "Now I have met Amy Rose. Hero Score is [heroScore]. Shadamy is [shadamy]"
-        "Exit from the bottom.":
-            $ darkScore += 0.5
-            shad "Hello Doctor. Dark Score is [darkScore]"
+        "Stay quiet and watch.":
+            $ proudOrCunning -= 1
+            "You stand back and watch them argue."
+            jump standBack
+        "Bark at them.":
+            $ proudOrCunning += 1
+            shad "Which one of you released me from stasis?"
+            jump barkAtThem
+
+label standBack:
+    "Shadow's proud or cunning stat is now [proudOrCunning]."
+
+label barkAtThem:
+    "Shadow's proud or cunning stat is now [proudOrCunning]."
 
     "Oh shit Big Foot's here now."
     "And it just goes straight to the fight."

@@ -8,7 +8,7 @@ label groovyTrainCafe:
     scene groovyTrainCafe with dissolve
     "You are now in the groovy train."
 
-    if injured:
+    if injury > 0:
         # Go to the Hero path.
         jump gtcHero
     else:
