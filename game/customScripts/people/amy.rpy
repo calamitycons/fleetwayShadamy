@@ -1,4 +1,6 @@
 # Define Amy as a Character object
-define amy = Character("Amy", image="amy")
+define a = Character("Amy", image="a")
 
-image amy = Image("images/chr/amy/canon.png")
+image a = Image("images/chr/amy neutral.png")
+image a happy = Image("images/chr/amy squee.png")
+image a fight = Image("images/chr/Amy Shoot.png")

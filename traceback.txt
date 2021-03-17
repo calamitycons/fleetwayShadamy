@@ -1,24 +1,18 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/customScripts/places/groovyTrainCafe.rpy", line 11, in script
-    if injured:
-  File "game/customScripts/places/groovyTrainCafe.rpy", line 11, in <module>
-    if injured:
-NameError: name 'injured' is not defined
+  File "game/customScripts/places/ironGate.rpy", line 117, in script
+    jump bigFootArrives
+ScriptError: could not find label 'bigFootArrives'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/customScripts/places/groovyTrainCafe.rpy", line 11, in script
-    if injured:
-  File "renpy/ast.py", line 1843, in execute
-    if renpy.python.py_eval(condition):
-  File "renpy/python.py", line 2142, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "renpy/python.py", line 2135, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/customScripts/places/groovyTrainCafe.rpy", line 11, in <module>
-    if injured:
-NameError: name 'injured' is not defined
+  File "game/customScripts/places/ironGate.rpy", line 117, in script
+    jump bigFootArrives
+  File "renpy/ast.py", line 1702, in execute
+    rv = renpy.game.script.lookup(target)
+  File "renpy/script.py", line 900, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'bigFootArrives'.
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/customScripts/places/ironGate.rpy", line 11: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
-    if proudOrCunning > 0:
-    ^
+File "game/customScripts/places/ironGate.rpy", line 48: end of line expected.
+    show sh xarm as sh xarm 2 "Which one of you released me from stasis?"
+                       ^
 
 Ren'Py Version: Ren'Py 7.4.0.1167
-Wed Jan 20 15:28:32 2021
+Wed Mar 17 16:44:33 2021
