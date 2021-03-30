@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Favorites Version="1.0">
+    <MoveTo>
+        <Recent>
+            <UUID Date="2021-03-29 18:45:47 -0400">C5153892-199A-4042-9E80-F31224085BD7</UUID>
+        </Recent>
+        <Popular>
+            <UUID Used="1" Date="2021-03-29 18:45:47 -0400">C5153892-199A-4042-9E80-F31224085BD7</UUID>
+        </Popular>
+    </MoveTo>
+    <Append>
+        <Recent/>
+        <Popular/>
+    </Append>
+</Favorites>
