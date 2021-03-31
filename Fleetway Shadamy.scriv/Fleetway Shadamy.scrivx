@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Template="No" Version="2.0" Identifier="4A6A449D-44F8-465F-BDB9-62464781B7D0" Creator="SCRWIN-3.0.0.0" Device="Mars" Author="Consuelo Higdon" Modified="2021-03-30 10:42:23 -0400" ModID="9963A7D4-3693-48D1-9E2C-DED3A320034C">
+<ScrivenerProject Template="No" Version="2.0" Identifier="4A6A449D-44F8-465F-BDB9-62464781B7D0" Creator="SCRWIN-3.0.0.0" Device="Mars" Author="Consuelo Higdon" Modified="2021-03-31 18:12:50 -0400" ModID="73FDC84D-B106-4F04-A30B-EEEFED27612B">
     <Binder>
         <BinderItem UUID="D9F30D6D-2FBE-4A21-8F95-35481C52CFFB" Type="DraftFolder" Created="2021-03-26 19:57:20 -0400" Modified="2021-03-28 21:19:58 -0400">
             <Title>Draft</Title>
@@ -121,7 +121,7 @@
                         <TextSelection>80,0</TextSelection>
                     </TextSettings>
                     <Children>
-                        <BinderItem UUID="A040235A-1AF8-4D34-B14F-C5B99EE229C4" Type="Folder" Created="2021-03-28 19:31:26 -0400" Modified="2021-03-29 19:47:06 -0400">
+                        <BinderItem UUID="A040235A-1AF8-4D34-B14F-C5B99EE229C4" Type="Folder" Created="2021-03-28 19:31:26 -0400" Modified="2021-03-31 17:54:50 -0400">
                             <Title>Characters</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -131,23 +131,17 @@
                                 <TextSelection>0,0</TextSelection>
                             </TextSettings>
                             <Children>
-                                <BinderItem UUID="CECEEF59-4C8A-4EBC-BBDB-CC3635B1A19F" Type="Folder" Created="2021-03-28 19:48:20 -0400" Modified="2021-03-29 19:47:06 -0400">
+                                <BinderItem UUID="CECEEF59-4C8A-4EBC-BBDB-CC3635B1A19F" Type="Folder" Created="2021-03-28 19:48:20 -0400" Modified="2021-03-31 17:54:46 -0400">
                                     <Title>Protagonists</Title>
                                     <MetaData>
                                         <StatusID>1</StatusID>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection Caret="719">0,719</TextSelection>
+                                        <TextSelection>0,0</TextSelection>
                                     </TextSettings>
-                                    <CorkboardAndOutliner>
-                                        <SelectedSubdocumentUUIDs>A835B393-284D-4E83-8EC9-129A4EAD311F</SelectedSubdocumentUUIDs>
-                                        <CorkboardSettings>
-                                            <Arrangement>Linear</Arrangement>
-                                        </CorkboardSettings>
-                                    </CorkboardAndOutliner>
                                     <Children>
-                                        <BinderItem UUID="53CF681C-CE38-4DEC-8CB9-C3E41FD4F174" Type="Text" Created="2021-03-28 19:53:53 -0400" Modified="2021-03-29 19:47:06 -0400">
+                                        <BinderItem UUID="53CF681C-CE38-4DEC-8CB9-C3E41FD4F174" Type="Text" Created="2021-03-28 19:53:53 -0400" Modified="2021-03-31 18:12:48 -0400">
                                             <Title>Amy</Title>
                                             <MetaData>
                                                 <StatusID>1</StatusID>
@@ -155,7 +149,7 @@
                                                 <IconFileName>Characters (Character Sheet).tiff</IconFileName>
                                             </MetaData>
                                             <TextSettings>
-                                                <TextSelection>2372,0</TextSelection>
+                                                <TextSelection>2538,0</TextSelection>
                                             </TextSettings>
                                             <Children>
                                                 <BinderItem UUID="A55E66F3-0C3D-4281-9FA3-6F1F790BF5BC" Type="Image" Created="2021-03-16 20:32:09 -0400" Modified="2021-03-29 19:41:16 -0400">
@@ -174,7 +168,7 @@
                                                 </BinderItem>
                                             </Children>
                                         </BinderItem>
-                                        <BinderItem UUID="A835B393-284D-4E83-8EC9-129A4EAD311F" Type="Text" Created="2021-03-28 19:54:14 -0400" Modified="2021-03-29 19:47:06 -0400">
+                                        <BinderItem UUID="A835B393-284D-4E83-8EC9-129A4EAD311F" Type="Text" Created="2021-03-28 19:54:14 -0400" Modified="2021-03-31 17:41:52 -0400">
                                             <Title>Shadow</Title>
                                             <MetaData>
                                                 <StatusID>1</StatusID>
@@ -182,7 +176,7 @@
                                                 <IconFileName>Characters (Character Sheet).tiff</IconFileName>
                                             </MetaData>
                                             <TextSettings>
-                                                <TextSelection>978,0</TextSelection>
+                                                <TextSelection>1983,0</TextSelection>
                                             </TextSettings>
                                         </BinderItem>
                                     </Children>
@@ -197,7 +191,7 @@
                                         <TextSelection>0,0</TextSelection>
                                     </TextSettings>
                                     <Children>
-                                        <BinderItem UUID="9FF7C584-F694-4A52-A6C3-339D66F766B4" Type="Text" Created="2021-03-28 21:29:33 -0400" Modified="2021-03-29 19:47:06 -0400">
+                                        <BinderItem UUID="9FF7C584-F694-4A52-A6C3-339D66F766B4" Type="Text" Created="2021-03-28 21:29:33 -0400" Modified="2021-03-31 18:12:01 -0400">
                                             <Title>Tekno</Title>
                                             <MetaData>
                                                 <StatusID>1</StatusID>
@@ -205,7 +199,7 @@
                                                 <IconFileName>Characters (Character Sheet).tiff</IconFileName>
                                             </MetaData>
                                             <TextSettings>
-                                                <TextSelection>83,0</TextSelection>
+                                                <TextSelection>1937,0</TextSelection>
                                             </TextSettings>
                                             <Children>
                                                 <BinderItem UUID="6EF35468-5246-4E75-82FA-14914B299828" Type="Image" Created="2021-03-17 15:09:37 -0400" Modified="2021-03-29 19:41:16 -0400">
@@ -223,6 +217,16 @@
                                                     </MediaSettings>
                                                 </BinderItem>
                                             </Children>
+                                        </BinderItem>
+                                        <BinderItem UUID="2C9711F6-E5AE-49C5-BD4B-A40ABECF6CAA" Type="Text" Created="2021-03-31 17:54:20 -0400" Modified="2021-03-31 17:54:29 -0400">
+                                            <Title>Cpt. Whisker</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <IconFileName>Characters (Character Sheet).tiff</IconFileName>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>0,0</TextSelection>
+                                            </TextSettings>
                                         </BinderItem>
                                     </Children>
                                 </BinderItem>
@@ -323,8 +327,8 @@
                 <CorkboardSettings>
                     <Arrangement>Linear</Arrangement>
                     <FreeformCorkboardDocuments>
-                        <IndexCardBinderUUID Position="2.851515,0.712121" TimeStamp="2021-03-29 19:51:00 -0400">4F9F74EE-39BC-4B61-8F2D-95C34FD63090</IndexCardBinderUUID>
                         <IndexCardBinderUUID Position="0.545455,0.684848" TimeStamp="2021-03-29 19:50:58 -0400">CEA81137-B699-4AD6-B863-A2C1D4104A62</IndexCardBinderUUID>
+                        <IndexCardBinderUUID Position="2.851515,0.712121" TimeStamp="2021-03-29 19:51:00 -0400">4F9F74EE-39BC-4B61-8F2D-95C34FD63090</IndexCardBinderUUID>
                     </FreeformCorkboardDocuments>
                 </CorkboardSettings>
             </CorkboardAndOutliner>
@@ -436,13 +440,13 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2021-03-26 19:57:20 -0400" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="No" ResetType="Time" ResetTime="01:00" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="Yes" WritingDays="">0</SessionTarget>
-        <PreviousSession Words="0" Characters="0" Date="2021-03-30 10:42:23 -0400"/>
+        <PreviousSession Words="436" Characters="3240" Date="2021-03-31 18:12:50 -0400"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2021-03-30 00:00:00 -0400">
+    <RecentWritingHistory Date="2021-03-31 00:00:00 -0400">
         <DraftWordCount>0</DraftWordCount>
         <DraftCharCount>0</DraftCharCount>
-        <OtherWordCount>0</OtherWordCount>
-        <OtherCharCount>0</OtherCharCount>
+        <OtherWordCount>109</OtherWordCount>
+        <OtherCharCount>608</OtherCharCount>
     </RecentWritingHistory>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="72.0" BottomMargin="72.0" PaperType="na-letter" Orientation="Portrait" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="No" PagesAcross="1" PagesDown="1"/>
 </ScrivenerProject>
