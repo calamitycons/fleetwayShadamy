@@ -27,9 +27,7 @@ image whitecover = "#FFF"
 # Eye open/close
 
 define closeeyes = ImageDissolve("/images/fx/eye.png", 0.8, ramplen=128, reverse=True, time_warp=eyewarp)
-# show bg dirktower with openeyes
 define openeyes = ImageDissolve("/images/fx/eye2.png", 0.8, ramplen=64, time_warp=eyewarp)
-# hide blackcover with openeyes
 
 # Basic placement
 
@@ -103,8 +101,6 @@ transform shoveup:
     ### Quickly push sprite to default position, from offscreen bottom
     yoffset 720
     linear 0.1 yoffset 0
-
-
 
 # Nodding, bouncing
 

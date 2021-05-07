@@ -3,27 +3,11 @@ init offset = 2
 label __package_entrypoint___aradiafix:
     jump __p__volumeeightroutetwo
 
-
 init:
     $ persistent.__p__aradialoops = 0
 
-
-# init python:
-#     def __p__rewindTo(label):
-#         for i in range(0, 100):
-#             print(i)
-#             context = renpy.game.context()
-#             print(context.current)
-#             # if context.current == label:
-#             #     print("BREAK")
-#             #     break
-#             # else:
-#             #     renpy.pause(0.1)
-#             renpy.rollback(1)
-
-
 label __p__volumeeightroutetwo:
-    
+
     $ renpy.block_rollback()
 
     $ main_menu = False
@@ -31,26 +15,26 @@ label __p__volumeeightroutetwo:
     scene black with Dissolve(1.0)
 
     $ quick_menu = True
-    
+
     show bg outsidenight with dissolve
-    
+
     play music "music/ARADIA_INTRO-OUTRO.flac" fadein 1 loop
-    
+
     "What are you doing here? What are you doing on this awful planet? You walk. You walk and you don’t stop walking. You walk until the moons are high in the sky and the lights from the city all but fade away."
     "You walk until you can’t think about anything but walking anymore. Then you zap. ZAP Zap ZaP z8p Z4P zap zAP. Who cares."
     "You just want out of here."
     "What’s happening to you? What are these thoughts? What are these half-remembered truths? Why do all your new friends seem so fresh but so familiar? You are lost inside yourself for what simultaneously feels like both a moment and an eternity."
-    
+
     #for this line.. If there is a way to make the text \"feel so heavy\" appear one word or letter at a time that would rule but if not then one word per screen is fine
-    
+
     window show
 
     "You stop walking and lay down. The grass feels cool on the back of your head and your eyes{nw}"
 
-    
+
     scene bg black with closeeyes
     "You stop walking and lay down. The grass feels cool on the back of your head and your eyes{fast} {cps=3}feel {w=0.3}so {w=0.3}heavy..."
-    
+
     window hide
 
     scene bg aradiadigsite
@@ -59,21 +43,21 @@ label __p__volumeeightroutetwo:
         ypos 565
         zoom 2
     with openeyes
-    
+
 label __p__aradiaintro:
-    
+
     play music "music/ARADIA-LOOP-mixed.flac" loop fadeout 1 fadein 1
-    
+
     show aradia past uhh:
         xpos 20
         ypos 565
         zoom 2
-        
+
     ara "0_0"
 
     "Troll Jesus CHRIST-"
     "Inches away from your face someone is bent over you and staring unblinkingly into your eyes."
-  
+
     show aradia:
         ease_back 0.3 xpos 640 ypos 730 zoom 1
 
@@ -81,7 +65,7 @@ label __p__aradiaintro:
     "This doesn’t seem to startle her at all. She doesn’t move from her precariously balanced squat. She is just looking at you. Observing you. Is she.. waiting for you to do something?"
 
     show aradia past grin
-    
+
     "After exactly 21 seconds of staring directly at you she offers an entirely too toothy smile. Part of you suspects she just remembered that's what you do in these situations."
     "She examines you with an obvious curiosity."
 
@@ -89,12 +73,12 @@ label __p__aradiaintro:
     ara "t0 nap am0ng the remains 0f the deceased"
 
     "Haha.. what?"
-    
+
     show aradia past confused at bounce
 
     "With a sarcastic motion that suggests looking literally anywhere around you, she draws your attention to what appears to be some sort of... digsite? You seem to have fallen asleep on a pile of bones."
     show aradia neutral
-    
+
     "Her shirt is emblazoned with a dark red Aries symbol. Oh cool, another zodiac kid. You must have said \"Aries\" out loud because she immediately corrects you."
 
     $ __p__rand = random.choice([True, False])
@@ -158,7 +142,7 @@ label __p__aradiaintro:
     ara past serious "i guess"
 
     "Wait, what does she mean {i}completely?{/i}"
-    
+
     show aradia past smile
 
     "There is a moment where her unbreaking, if not somewhat unsettling grin leans more towards normal. Well, ok, someone might describe it as normal if maybe you’d never seen anybody smile before."
@@ -186,51 +170,51 @@ label __p__aradiaintro:
 
     ara past serious "s0me0ne d0esn’t want y0u t0 remember"
     ara "but"
-    
+
     show aradia past neutral:
         easein 0.3 xpos 482 ypos 700 zoom 1.25
 
     "She looks at you and leans in close."
-    
+
     ara past smile "d0 y0u want t0 kn0w a secret"
-    
+
     if persistent.__p__aradialoops > 0:
         show aradiahint at fadinghint
-    
+
     menu:
         "[pick] Wait, did she just say {color=#a10000}\"gh0sts?\"":
             jump __p__aradiaghosts
-            
+
         "[pick] You have never wanted anything more in your entire life." if persistent.__p__aradialoops > 0:
             jump __p__aradiasecrets
-            
+
 label __p__aradiaghosts:
-    
+
     hide aradiahint with dissolve
 
     "You’re really not following. Sounds kind of fake if you’re being honest. \"Ghosts?\" Yeah. Ok. You’ve seen some weird shit on this planet but you draw the line at ghosts."
 
     "The spooky bit was kind of charming and cool at first but this is borderline ridiculous."
-    
+
     show aradia neutral:
         easeout 0.3 xpos 640 ypos 730 zoom 1
-    
+
     if persistent.__p__aradialoops > 1:
-        
+
         jump __p__aradiaghostsquickfail
-        
+
     if persistent.__p__aradialoops > 0:
-        
+
         ara past confused "0h"
-        
+
         "She almost looks hurt. Her tone turns hollow."
 
         ara past confused "h0w disapp0inting"
-        
+
     else:
 
         ara past surprised "0h"
-        
+
         "She almost looks hurt. Her tone turns hollow."
 
         ara uhh2 "h0w disapp0inting"
@@ -244,21 +228,21 @@ label __p__aradiaghosts:
     ara "maybe y0u are just like the rest"
     ara "im 0k with that"
     ara "it d0es n0t b0ther me"
-    
+
     show aradia at dreamfloating
 
     "She is floating several feet off the ground. Typically this is your sign not to say \"mmmmm sounds like it kinda DOES bother you.\""
 
     menu:
-        
+
         "She is floating several feet off the ground. Typically this is your sign not to say \"mmmmm sounds like it kinda DOES bother you.\"{fast}"
-        
+
         "[pick] Give in to your need to feel like you know better than everyone.":
-                
+
             "Mmmmm sounds like it kinda DOES bother her. Sounds like she probably isn’t {color=#a10000}\"0k\"{/color} with it."
 
             "She is silent for what seems like several minutes. Have your words reached her?"
-            
+
             show aradia past ghost with dissolve
 
             "When she turns to you, her eyes are white and her expression is blank."
@@ -266,16 +250,16 @@ label __p__aradiaghosts:
             "Her head tilts to the side, as if she is looking at a curious bauble, her face unchanging."
 
             ara "n0thing really b0thers me anym0re"
-            
+
         "[pick] Keep your mouth shut for once.":
-            
+
             "You keep quiet. Now is not the time for your incredible insights. The restraint you have shown here will surely be rewarded."
 
             "She turns to you slowly, dangling somewhat limply in the air."
 
             ara "this act was f0r y0ur benefit"
             ara "but t0 pr0ceed any further is p0intless"
-            
+
             show aradia past ghost with dissolve
 
             "Her eyes are white. Her face is unreadable. Oh my god ghosts are real too? Alternia is fucked up."
@@ -291,7 +275,7 @@ label __p__aradiaghosts:
     "There is a hollow disappointment in her voice. You’ve never been negged by a ghost before."
 
     "She raises a hand to you, her form silhouetted by the twin moons. There is a blissful moment where you feel suspended and still."
-    
+
     scene black with Dissolve (0.5)
 
     $ persistent.__p__aradialoops += 1
@@ -301,126 +285,126 @@ label __p__aradiaghosts:
     return
 
     # $ quick_menu = False
-    
+
     # play music "music/game_over.mp3" fadeout 1.0 noloop
-    
+
     # scene gameover aradia1 with Dissolve(1.0)
-    
+
     # show bg aradiadigsite behind gameover
     # show aradia past ghost at dreamfloating behind gameover
 
     # $ renpy.pause(10)
-    
+
     # hide gameover with Dissolve(1.0)
-    
+
     # $ renpy.music.set_volume(0.7, delay=0, channel='sound')
-    
+
     # play sound "music/BE-KIND_RE-WIND.flac"
-    
+
     # show aradia past uhh:
     #     xpos 20
     #     ypos 565
     #     zoom 2
-    
+
     # $ renpy.movie_cutscene("ararewind1.mpg")
-    
+
     # $ persistent.__p__aradialoops += 1
-    
+
     # $ quick_menu = True
 
     # jump __p__aradiaintro
 
 label __p__aradiaghostsquickfail:
-    
+
     show aradia past uhh
-    
+
     ara "0h y0uve g0t t0 be kidding me"
     $ persistent.__p__aradialoops = 1
     scene bg black with dissolve
-    
+
     $ achievement.grant("ACH_REALLY")
     $ achievement.sync()
-    
+
     return
 
 label __p__aradiasecrets:
-    
+
     show aradia past smile:
         xpos 482 ypos 700 zoom 1.25
-        
+
     show bg aradiadigsite
-    
+
     if renpy.music.get_playing(channel='music') != "music/ARADIA-LOOP-mixed.flac":
         play music "music/ARADIA-LOOP-mixed.flac" loop fadeout 1 fadein 1
-    
+
     hide aradiahint with dissolve
-    
+
     "You have to admit you are a little fascinated by this line of inquiry. You don your signature cool person facade and tell her that there is nothing in this god forsaken universe that will keep you from hearing that secret. You throw in that you are going to die if you do not find out immediately."
 
     show aradia past grin:
         easeout 0.5 xpos 640 ypos 730 zoom 1
-        
+
     "Smooth as butter, baby."
-    
+
     ara "you dont know know how relieved i am to hear that"
 
     "The way she speaks has shifted slightly. It sounds fuller. Livelier. That's... good?"
-    
+
     show aradia past glow with dissolve
-    
+
     show aradia glow as godradia:
         xpos 640 ypos 730 zoom 0.3 xanchor 640 yanchor 730 transform_anchor True
         easeout 1.4 zoom 1
-        
+
     pause 1.85
-    
+
     hide aradia past glow
     hide godradia
     show aradia smile
     with dissolve
-    
+
     ara "oh yes i have been alive for some{nw}"
-    
+
     show aradia smile2
     ara "oh yes i have been alive for some {fast}{cps=4}{i}time{/i}{nw}"
-    
+
     show aradia smile
     ara "oh yes i have been alive for some {i}time{/i}{fast} now"
-    
+
     ara "all according to plan"
 
     "When she says the word \"time\" her eyebrows lift a little, as if cueing you in on a joke she seems to think you are completely familiar with. You give it a polite chuckle. What a character."
 
     "She beams, and there is a moment you forget that she was talking about ghosts and secrets."
-    
+
     ara talk "they cant find us here"
     ara grin "we have made them very mad :D"
 
     "They can’t find us here? Them? We’ve? Mad? Made? You don’t ask for clarification on \"very.\" You’re feeling pretty confident about that one."
 
     ara talk "this is not the first{nw}"
-    
+
     ara waggle "this is not the first{fast} {cps=4}{i}time{/i}{nw}"
-    
+
     ara talk "this is not the first {i}time{/i}{fast} we have met"
-    
+
     ara confused "though it is hard to say how long has passed since then"
-    
+
     ara waggle "{cps=4}{i}time{/i}{nw}"
-    
+
     ara confused "{i}time{/i}{fast} passes differently out here"
 
     "Hey apropos of nothing and far be it from you to comment on someone’s appearance but why does she look so much older? Why is she wearing the magic teen pajamas like John and them?"
-    
+
     "How does she manage to do her makeup so well and just not brush her hair at all? You know with curls the issue might actually be over brushing. You don’t want to brag but you happen to have an encyclopedic knowledge of hair care products. Has she considered switching to a sulfate-free shampoo?"
-    
+
     "God you wish you had hair."
 
     ara oh "wow you ask a lot of questions but i guess thats natural"
     ara talk "right now we are outside of the canonical relevanc-"
 
     show aradia mm at bounce
-    
+
     "You are gonna have to stop her right there. You have had enough of canon and relevancy and what it means and what is or isn’t. Do you people never tire of sniffing your own farts about canonical impact."
 
     ara bothered "wow rude"
@@ -430,7 +414,7 @@ label __p__aradiasecrets:
     "FUCK the narrative."
 
     show aradia grin at nod
-    
+
     ara grin "absolutely phenomenal and i could not agree more"
     ara talk "like i was trying to explain, out here even the powers that be cant hear us"
     ara amused "i must say im a big fan of your work"
@@ -467,11 +451,11 @@ label __p__aradiasecrets:
 
     ara oh "think of it as a liminal space made of the same thing memories are made of"
     ara talk "i have spent a lot of"
-    
+
     show aradia wagglebig
-    
+
     ara "{i}time{i}"
-    
+
     ara talk "in the furthest ring and in these bubbles and trying to figure out how they work"
     ara "so i have some ideas"
     ara oh "but i dont think the ones who conceived them even really know exactly"
@@ -485,14 +469,14 @@ label __p__aradiasecrets:
     ara amused "instead of explaining it to you it was easier just to rewind things and have you try again"
 
     "You’re almost too embarrassed to ask how many times it took you to get it right."
-    
+
     show aradia disgusted at nod
 
     "She puts her hand on your shoulder and just shakes her head. Oh."
 
     ara amused "the important thing is you made it"
     ara "i tried so many things to get you here"
-    
+
     ara oh "0ne time i pretended to be a gh0st 0_0"
 
     "She affects a spooky tone, sort of waving her fingers around."
@@ -506,21 +490,21 @@ label __p__aradiasecrets:
     "You take her hand and she smiles at you."
 
     "And then everything goes off the shits."
-    
+
     play music "music/friendsim_title_full.mp3" loop fadeout 1.0 fadein 1.0
-    
+
     show mspaghost1 behind aradia at ghostfloating1
     show mspaghost2 behind aradia at ghostfloating2
 
     "Something flies into you. Oh fuck was that a ghost! You can see them! Oh fuck it has your face!"
-    
+
     show mspaghost3 behind mspaghost1 at ghostfloating3
     show mspaghost4 behind mspaghost2 at ghostfloating4
 
     "There are so many of them."
-    
+
     show aradia waggle
-    
+
     if persistent.flash:
         show memories at fadingmemories
     else:
@@ -533,9 +517,9 @@ label __p__aradiasecrets:
     "But..."
 
     "You remember. You remember all of them."
-    
+
     show aradia smile
-    
+
     hide memories
     hide mspaghost1
     hide mspaghost2
@@ -561,38 +545,38 @@ label __p__aradiasecrets:
     "God you miss just fucking around about hotdogs. You wonder what your friends are up to now. You think maybe you should check on them."
 
     "She looks you in the eyes, and you stop rolling them for two seconds."
-    
+
     show bg aradiadigsite
 
     ara oh "arent you tired of being nice"
     ara grin "dont you just want to go apeshit"
-    
+
     menu:
-        
+
         "[pick] You want to see this whole place break apart.":
-            
+
             jump __p__aradiabreakapart
-            
+
         "[pick] Oh, look at the time, you were supposed to pick your punk rock alien daughter up at the mall like a hundred years ago or whatever.":
-            
+
             jump __p__aradiavoid
 
 label __p__aradiabreakapart:
-    
+
     play music "music/ARADIA-LOOP-mixed.flac" loop fadeout 1 fadein 1
 
     "You think about it for a little bit. You’ve been gone for so long, and you can go back whenever you want, right? You gotta focus on the friends in the here and now."
 
     with hpunch
-    
+
     "You know what. Yeah. Let’s trash this place. You stand up and kick over a small pile of bones."
-    
+
     show aradia ohno at bounce
 
     ara "nooo my bones"
 
     "Oh oops sorry."
-    
+
     show aradia sad at lowered
 
     "She kneels down next to the carnage and just stares for a little bit. Shit she looks completely devastated. It is actually kind of hard to watch."
@@ -600,13 +584,13 @@ label __p__aradiabreakapart:
     "You turn away. Aw biscuits. This is no way to canonize a friendship with a time god. What were you thinking? You are just too damn good at kicking over small piles of shit! Curse these powerful legs. Marvus wouldn’t do something like this. That guy was cool as hell."
 
     show aradia grin at default with move
-    
+
     show aradia grin at bounce
-    
+
     "Aradia begins to laugh in a way someone less eager for friendship might describe as a cackle."
 
     ara smile "look"
-    
+
     show aradia waggle
 
     "She has arranged the bones into an outlandish if not slightly vulgar configuration."
@@ -623,7 +607,7 @@ label __p__aradiabreakapart:
     "Ha."
 
     ara grin "there you go :)"
-    
+
     ara confused "i meant apeshit more in the larger sense"
     ara "i dont think any of them care about bones"
     ara amused "their loss"
@@ -632,28 +616,28 @@ label __p__aradiabreakapart:
     "You don’t know who \"they\" are and you don’t give a single solitary shit. Fuck this place. Fuck whoever took your memories. Let's go absolutely buckwild up in this piece. You kick up some dirt and don’t even care."
 
     show aradia oh at nod
-    
+
     show sickle1:
         xpos -300 ypos 20
         easein 0.75 xpos 20
-        
+
     show sickle2:
         alpha 0 xpos 20 ypos 20
         pause 1.0
         linear 0.5 alpha 1
-    
+
     "Aradia produces a series of abstractions from thin air. Some sort of giant Ouija Board. The lens spells out S-I-C-K-L-E but in Alternian which you still don’t understand why you can read but you know what not the weirdest shit happening right now."
 
     hide sickle1
     hide sickle2
-    
+
     show sickle3:
         xpos 20 ypos 20
         easeout 0.12 ypos 10
         linear 0.12 ypos 20
         pause 1.0
         easein 0.75 xpos -300
-        
+
     "Karkat’s rambunctiously colored sickle appears mid-air. She hands it to you and excitedly takes your other hand."
 
     ara smile "lets go :)"
@@ -664,17 +648,17 @@ label __p__aradiabreakapart:
         with retjump
     else:
         with retjumpslow
-    
+
     "Over the next few hours you teleport around both Alternia and Earth dropping a bunch of seemingly random objects in nonsense places, being careful not to be seen."
-    
+
     show bg johnfyard
     if persistent.flash:
         with retjump
     else:
         with retjumpslow
-        
+
     "You change a gift itinerary in John’s Dad’s PDA. You sign the kids up for cellphone plans."
-    
+
     show bg rosemomroom
     if persistent.flash:
         with retjump
@@ -682,7 +666,7 @@ label __p__aradiabreakapart:
         with retjumpslow
 
     "Are you just... doing chores? This really feels more like running errands than breaking anything."
-    
+
     show bg kanayahive
     if persistent.flash:
         with retjump
@@ -694,13 +678,13 @@ label __p__aradiabreakapart:
     ara smile "oh i bet they are gonna be so steamed"
 
     "You personally guarantee nobody in their right mind will care about any of this, but the moment the words leave your mouth something in the distance cracks. You don’t see it. You don’t hear it. You {i}feel{/i} it."
-    
+
     show bg vriskahive
     if persistent.flash:
         with retjump
     else:
         with retjumpslow
-        
+
     "You zap to the next location. You steal Vriska’s lipstick and there it is again. A crack."
 
     "You almost can’t believe it. This stupid plan is working. You guess the devil really is in the details. Next to you Aradia looks absolutely {i}thrilled.{/i}"
@@ -717,24 +701,24 @@ label __p__aradiabreakapart:
         with retjump
     else:
         with retjumpslow
-        
+
     ara "if you just keep up whatever it is youve been doing this whole place is going to come down"
-    
+
     show aradia smile at bounce
-    
+
     ara "hup"
 
     "Aradia lifts an air conditioning unit and throws it into the stratosphere with her mind. Wow. That's fucked up."
-    
+
     show aradia talk at lowered
     play music "music/ARADIA_INTRO-OUTRO.flac" fadeout 1 fadein 1 loop
-    
+
     "She sits on the edge of the roof, overlooking the city."
 
     ara "thank you"
-    
+
     ara smile "this was fun"
-            
+
     show bg roofcracked
     with hpunch
 
@@ -744,16 +728,16 @@ label __p__aradiabreakapart:
     ara "you still have a few more friends to make"
 
     "What? That’s it? You put a crack in reality and then just go back to spending time with some teens?"
-    
+
     show aradia confused at default with move
 
     ara confused "hm"
-    
+
     show aradia talk at bounce
-    
+
     ara "yeah!"
     ara oh "arent you also sort of a teen"
-    
+
     "You explain that it was never very clear actually."
 
     ara confused "well the answers you want are at the end of your path"
@@ -762,44 +746,44 @@ label __p__aradiabreakapart:
     ara smile "it will all make sense then"
 
     "You wish that were true. You sit next to her, your legs dangling over the edge of the moulding."
-    
+
     show aradia oh at bounce
-    
+
     show bg daveroof with wipedown
-    
+
     "Before your eyes, the crack in the sky appears to be sewn shut, almost as quickly as it appeared. She was right. Something is happening."
 
     show aradia talk
-    
+
     "The two of you sit in each other's company for what feels like both a moment and an eternity."
-    
+
     $ achievement.grant("ACH_ARADIA")
     $ achievement.sync()
-    
+
     # $ persistent.__p__aradialoops = 0
-    
+
     call ending pass ("victory aradia", True, True) from __p___call_ending_33
-    
+
     return
-    
+
 label __p__aradiavoid:
-    
+
     show aradia oh at bounce
-    
+
     "Oh my god your friends??? You have to go back. You look at Aradia. This is awkward, you actually have a prior engagement. Actually... This could work! You extend your hand in the universal \"come with me\" gesture."
 
     scene blackcover with closeeyes
-    
+
     pause 1
-    
+
     show bg ardatahive at bgflicker
-    
+
     pause 2.75
-    
+
     show bg mall at bgflicker
-    
+
     pause 2.25
-    
+
     "You try to focus on anyone. The comforting chaos of Ardata’s house. The burnt out mall where you promised Daraya you’d take her with you. Yes, it’s all coming back to you. You are so glad you have an encyclopedic knowledge of that whole adventure before continuing. You zap the both of you onwards."
 
     scene bg black
@@ -809,11 +793,11 @@ label __p__aradiavoid:
         with retjump
     else:
         with retjumpslow
-        
+
     "You’re in the fucking hallway! There is that t-posing TURD. Aradia goes wide eyed. NO."
-    
+
     "Not this time. Eat my whole ass you nobodies."
-    
+
     hide tpose isolated with dissolve
 
     "You conjure the strongest memory you can. Oh my god. You sniffed Marvus’s armpit. The shame you are feeling sends you reeling. This is it you guess."
@@ -824,16 +808,16 @@ label __p__aradiavoid:
         easein 1.1 alpha 0.6
         pause 0.5
         ease_back 0.7 zoom 4 xpos -625 ypos -400 alpha 1
-        
+
     show whitecover:
         alpha 0
         pause 1.9
         easein 0.3 alpha 1
-    
+
     ara "YOU WHAT"
-    
+
     scene bg aradiavoid with dissolve
-    
+
     "But nothing is here."
 
     "You float listlessly in a black void."
@@ -845,7 +829,7 @@ label __p__aradiavoid:
     "You disappear and reappear in the same spot. You phase in and out over and over and nothing happens. Aradia watches you, but seems to be giving you space to process this."
 
     "It isn’t enough. It was never enough. They’re gone."
-    
+
     $ renpy.music.set_volume(0.875, delay=1.5, channel='music')
     play sound "music/ITS_NOTHING.flac" loop
 
@@ -854,9 +838,9 @@ label __p__aradiavoid:
     "An impossibly long tendril appears from the void and slowly makes its way towards you. It gently wraps itself around you. You don’t even bother to question it at this point."
 
     show aradia oh with moveinbottom
-    
+
     ara "wow"
-    
+
     ara grin "on a scale of one to ten how shaken is your faith"
 
     "Why aren’t they here, Aradia? Where is everything."
@@ -878,13 +862,13 @@ label __p__aradiavoid:
     ara "friends and grudges. life and death. existence and nothingness."
     ara "isnt it all the same in the end?"
     ara smile "the only th—"
-    
+
     show aradia oh at bounce
 
     "If this is about bones you are going to lose your mind."
 
     show aradia smile
-    
+
     "She smiles."
 
     ara amused "well i can confidently say it wasnt not about bones"
@@ -904,7 +888,7 @@ label __p__aradiavoid:
     "You ask her to let you sit here for a little bit longer. You don’t want to forget just yet."
 
     ara talk "ok"
-    
+
     call ending pass ("gameover aradia2", False, True)
 
     return
@@ -912,28 +896,27 @@ label __p__aradiavoid:
     # $ renpy.pause(0.5)
 
     # $ quick_menu = False
-    
+
     # stop music fadeout 1.0
-    
+
     # scene gameover aradia2 with Dissolve(1.0)
-    
+
     # show bg aradiavoid behind gameover
     # show aradia talk behind gameover
 
     # $ renpy.pause(15)
-    
+
     # hide gameover with Dissolve(1.0)
-    
+
     # $ renpy.music.set_volume(0.7, delay=0, channel='sound')
-    
+
     # play sound "music/BE-KIND_RE-WIND.flac"
-    
+
     # show aradia past smile:
     #     xpos 482 ypos 700 zoom 1.25
-        
-    # show bg aradiadigsite
-    
-    # $ renpy.movie_cutscene("ararewind2.mpg")
-    
-    # jump __p__aradiasecrets
 
+    # show bg aradiadigsite
+
+    # $ renpy.movie_cutscene("ararewind2.mpg")
+
+    # jump __p__aradiasecrets
