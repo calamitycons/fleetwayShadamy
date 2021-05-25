@@ -3,12 +3,21 @@ label recap:
 
     scene amysRecap #Full splash picture of Amy a la SA2
 
-    narrator """I'm Amy Rose the Hedgehog, and they don't call me Aim for nothing!
+    narrator """My name is Amy Rose, and they don't call me 'Aim' for nothing!
 
-    I was in space with my best friend Tekno after we found out Shortfuse the Cybernik had been hanging out with mysterious aliens for months now! It took a while to get everything sorted out, but we managed to do it.
+    After we found our lost comrade Shortfuse the Cybernik, Tekno and I returned to Planet Mobius.
 
-    We got home in a UFO that the aliens provided to us, but on the way we knocked into some mysterious building, and now the Guardian Units of Nations are after us!
+    On the way, we knocked into a hidden space station orbiting the world! Its old defence systems attacked us, forcing us to land and find the off switch.
 
-    We didn't do anything wrong, but then we discovered a strange, black and red Hedgehog in the space station. He was being held in suspended animation. We couldn't leave the poor guy behind, so now Tekno and my old pal Porker Lewis are trying to revive him from his cage.
+    That was where we discovered him: black and red hedgehog held in suspended animation! He'd be lost if we shut the ship down with him still plugged in, so we took his tube with us first.
 
-    I wonder what this guy was doing in there..."""
+    Now Tekno and the Kintobor Super Computer are trying to revive him from stasis. I just wish I could do something to help. I'm bored out of my skull!"""
+
+    scene teknosRecap #splash of Tekno
+
+    narrator """I am Tekno the Canary. I don't have any powers, but I /am/ tech talented!
+    """
+
+    scene shadowsRecap #splash of Shadow
+
+    narrator """I am Shadow the Hedgehog, the world's Ultimate Lifeform."""
