@@ -5,18 +5,17 @@ label recap:
 
     narrator """My name is Amy Rose, and they don't call me 'Aim' for nothing!
 
-    After we found our lost comrade Shortfuse the Cybernik, Tekno and I returned to Planet Mobius.
+    My best mate Tekno and I found a hidden space station orbitting Planet Mobius! Its old defence systems kicked on, so we had to land our space ship and find the off switch.
 
-    On the way, we knocked into a hidden space station orbiting the world! Its old defence systems attacked us, forcing us to land and find the off switch.
+    Hidden in the power core was a black and red hedgehog, held in suspended animation! He'd be lost if we shut the ship down with him still plugged in, so we took his tube with us first.
 
-    That was where we discovered him: black and red hedgehog held in suspended animation! He'd be lost if we shut the ship down with him still plugged in, so we took his tube with us first.
+    Now Tekno and the Kintobor Super Computer are working at reviving him from stasis. But one question's still on my mind.
 
-    Now Tekno and the Kintobor Super Computer are trying to revive him from stasis. I just wish I could do something to help. I'm bored out of my skull!"""
+    What in blazes was he doing up there?"""
 
     scene teknosRecap #splash of Tekno
 
-    narrator """I am Tekno the Canary. I don't have any powers, but I /am/ tech talented!
-    """
+    narrator """I am Tekno the Canary. I haven't any powers, but I /am/ tech talented!"""
 
     scene shadowsRecap #splash of Shadow
 
