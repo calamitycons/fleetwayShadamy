@@ -2,17 +2,9 @@ label testRoom:
     scene test room
 
     "Nothing but tests in here."
-    shad "Hello."
+    "The first thing I want to make sure works properly is the statistics system."
+    "I was inspired by the visual novel Long Live the Queen, and want to emulate that system as much as I can."
+    "I will not have as many complex numbers to keep track of. Instead, I will have two major categories (heroScore and darkScore) that will affect the game."
+    "Perhaps one more category can exist to hold the numbers of miscellaneous traits/skills."
 
-    while cruelOrKind != 10:
-        menu:
-            "We need cruelOrKind to be 10."
-            "make cruelOrKind 100":
-                $ cruelOrKind = assignWithinLimit(100)
-                "Now the cruelOrKind variable is [cruelOrKind]."
-            "increment cruelOrKind by + 1":
-                $ cruelOrKind += assignWithinLimit(1)
-                "I'm working on it. cruelOrKind is [cruelOrKind]"
-
-    "Now it is at 10. Good job."
-    jump ironGate
+    "heroScore is composed of "
