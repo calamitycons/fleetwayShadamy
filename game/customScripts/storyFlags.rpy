@@ -4,8 +4,6 @@
 
 init offset = -1
 
-define narrator = nvl_narrator
-
 # Following code provided by @Salvr on Discord
 init python:
     def assignWithinLimit(newValue, statMIN=-5, statMAX=5):
