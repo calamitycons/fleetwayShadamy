@@ -1,18 +1,42 @@
 label testRoom:
     scene test room
+    show a at sideLeft with moveinleft
+    show sh xarm at sideRight
 
-    "Nothing but tests in here."
-    shad "Hello."
+    a "Hello Shadow."
+    sh "Hello Amy."
 
-    while cruelOrKind != 10:
-        menu:
-            "We need cruelOrKind to be 10."
-            "make cruelOrKind 100":
-                $ cruelOrKind = assignWithinLimit(100)
-                "Now the cruelOrKind variable is [cruelOrKind]."
-            "increment cruelOrKind by + 1":
-                $ cruelOrKind += assignWithinLimit(1)
-                "I'm working on it. cruelOrKind is [cruelOrKind]"
+    show sh xarm:
+        pause 0.5
+        jittering
 
-    "Now it is at 10. Good job."
-    jump ironGate
+    sh "I would like to be facing you, actually. {w=5} Give me a second."
+
+    # Amy approaches to help, getting a little close...
+    show a:
+        sideLeft
+        ease 1.0 defaultPos
+
+    a "Do you need any help with that?"
+
+    menu:
+        a "Do you need any help with that?"
+        "No thanks.":
+            jump noThanks
+
+        "Maybe...":
+            #Shadow jitters more violently
+            "You clicked the button."
+        "Yes, please.":
+            #Shadow stops jittering
+            "You clicked the button."
+
+label noThanks:
+    #Shadow flips on his own
+    show sh xarm:
+        flip
+
+    show a at sideLeft with move
+
+    sh "Thank you, but I'm okay."
+    a "Oh! Sorry."
